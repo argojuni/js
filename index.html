@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JavaScript</title>
+</head>
+<body>
+    <div id="domJS"></div>
+    <br>
+    <div id="aritmatika75"></div>
+    <br>
+    <div id="kondisi35"></div>
+    <br>
+    <button onclick="keluarkanNama();">click keluar nama</button>
+    <br>
+    <div id="eventkeluaran"></div>
+</body>
+<script>
+    var kampus = "Institut Asia";
+    var semester = 5;
+    document.getElementById('domJS').innerHTML="nama saya juni "+kampus+" dan semester "+semester;
+    // arimatika75
+    var angka1 = 100;
+    var angka2 = 20;
+
+    var arimatikanya = angka1 + angka2;
+    document.getElementById("aritmatika75").innerHTML = arimatikanya;
+
+    // kondisi if else
+    var nilai = 65;
+    
+    if(nilai > 65 ){
+        document.getElementById("kondisi35").innerHTML = "maka nilai saya terlampau bagus";
+    }else{
+        document.getElementById("kondisi35").innerHTML = "maka nilai saya buruk";
+    }
+    // peulangan 15
+    var heading = 1;
+    while(heading <= 6){
+        document.write("<h" + heading + ">" + "ini heading ke-"+heading+"</h"+heading+">");
+        heading ++;
+    }
+    // function dan event 35
+    function keluarkanNama() {
+        document.getElementById("eventkeluaran").innerHTML="Nama saya Juniargo"
+    }
+</script>
+</html>
