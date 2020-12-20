@@ -13,8 +13,15 @@
     <div id="kondisi35"></div>
     <br>
     <button onclick="keluarkanNama();">click keluar nama</button>
-    <br>
     <div id="eventkeluaran"></div>
+    <br>
+    <button onclick="terklik();">click saya</button>
+    <br>
+    <input type="text" name="" id="input1" value="" placeholder="nilai 1"> +
+    <input type="text" name="" id="input2" value="" placeholder="nilai 2">
+
+    <button onclick="jumlah()">=</button>
+    <div id="hasilnilai"></div>
 </body>
 <script>
     var kampus = "Institut Asia";
@@ -44,6 +51,24 @@
     // function dan event 35
     function keluarkanNama() {
         document.getElementById("eventkeluaran").innerHTML="Nama saya Juniargo"
+    }
+    function terklik() {
+        alert('terklik')
+    }
+    function jumlah(){
+        var input1 = document.getElementById("input1").value
+        var input2 = document.getElementById("input2").value
+
+        var hasilnilai = parseInt(input1) + parseInt(input2);
+        // document.getElementById("hasilnilai").innerHTML = hasilnilai
+
+        if (hasilnilai >= 8) {
+                document.getElementById("hasilnilai").innerHTML = "Nilai anda "+hasilnilai+". Grade A"     
+        } else if(hasilnilai < 8 && hasilnilai >= 5){
+                document.getElementById("hasilnilai").innerHTML = "Nilai anda "+hasilnilai+". Grade B"     
+        }else{
+            document.getElementById("hasilnilai").innerHTML = "Nilai anda "+hasilnilai+". Grade E kacau"     
+        }
     }
 </script>
 </html>
